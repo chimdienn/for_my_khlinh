@@ -22,7 +22,7 @@ function flashAnimation(id){
 }
 
 function playSound(id){
-    var sound = new Audio(id + ".mp3");
+    var sound = new Audio("sounds/" + id + ".mp3");
     if (id == "wrong"){
         sound.volume = 0.15;
     }
@@ -82,7 +82,7 @@ const loveMessages = [
 $("h1").on("click", function(){
     if (!gameStarted){
         level = 0;
-        $("footer").html("Made with ❤️ by Trọng Đức.");
+        $("footer").html("Made with ❤️ from Trọng Đức.");
         nextSequence();
     }
     gameStarted = true;
