@@ -22,7 +22,7 @@ function flashAnimation(id){
 }
 
 function playSound(id){
-    var sound = new Audio(id + ".mp3");
+    var sound = new Audio("sounds/" + id + ".mp3");
     if (id == "wrong"){
         sound.volume = 0.15;
     }
@@ -51,7 +51,7 @@ function restartGame(){
 }
 
 function newGame(){
-    $("h1").html("You Won! Press this line to restart");
+    $("h1").html("You Won! Press This Line to Restart");
     var message = loveMessages[Math.floor(Math.random() * 4)];
     $("footer").html(message);
     gamePattern = [];
@@ -61,9 +61,9 @@ function newGame(){
     
 }
 
-const maxLevel = 13;
+const maxLevel = 10;
 const buttonColours = ["green", "red", "yellow", "blue"];
-const gamePatternSound = [0, "g3", "g3", "g4", "e4", "c4", "b4", "a4", "f4", "f4", "e4", "c4", "d4", "c4"];
+const gamePatternSound = [0, "e4", "c4", "b4", "a4", "f4", "f4", "e4", "c4", "d4", "c4"];
 var gamePattern = [];
 var userClickedPattern = [];
 
@@ -72,17 +72,17 @@ var gameStarted = false;
 var levelWon = true;
 
 const loveMessages = [
-    "Em giỏi lắm! Anh iu em.",
-    "Hẹn ngày gặp nhau em nhé!",
-    "Khi nào gặp cho anh ôm cái nha ^^",
-    "anh nhớ khánh linh của anh."
+    "em giỏi lắm! iu em.",
+    "sinh nhật hạnh phúc nha, thương em.",
+    "khi nào gặp cho anh ôm cái nha ^^",
+    "anh nhớ khánh linh quá."
 ]
 
 
 $("h1").on("click", function(){
     if (!gameStarted){
         level = 0;
-        $("footer").html("Made with ❤️ from Trọng Đức.");
+        $("footer").html("Made with ❤️ by Trọng Đức.");
         nextSequence();
     }
     gameStarted = true;
